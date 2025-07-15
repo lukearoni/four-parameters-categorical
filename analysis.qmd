@@ -6,10 +6,15 @@ execute:
   echo: false
 ---
 
-Statisticians often try to find ways to project the election results of the US presidential elections. Using surveyed data about US citizens from American National Election Studies, we try to find how the sex of the voters is associated with their choices in the 1992 presidential election.
+Statisticians often try to find ways to project the election results of the US presidential elections. Using surveyed data about US citizens from American National Election Studies, we try to find how the sex of the voters is associated with their choices in the 1992 presidential election. A potential weakness in our model is that the respondents to the survey don't necessarily accurately represent the total voter population in the US. There is a certain demographic that are more likely to answer the survey, which could influence representativeness.
+
+$$P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \beta_{kn} X_n}}{\sum_{j=1}^{K} e^{\beta_{j0} + \beta_{j1} X_1 + \beta_{j2} X_2 + \cdots + \beta_{jn} X_n}}$$
+
 
 ```{r}
 #| message: false
 library(tidyverse)
 library(primer.data)
+library(tidymodels)
+library(broom)
 ```
