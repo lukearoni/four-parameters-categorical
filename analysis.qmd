@@ -1,0 +1,6 @@
+---
+title: "Four Parameters Categorical"
+format: html
+author: Luke Li
+---
+
