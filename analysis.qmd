@@ -2,5 +2,14 @@
 title: "Four Parameters Categorical"
 format: html
 author: Luke Li
+execute: 
+  echo: false
 ---
 
+Statisticians often try to find ways to project the election results of the US presidential elections. Using surveyed data about US citizens from American National Election Studies, we try to find how the sex of the voters is associated with their choices in the 1992 presidential election.
+
+```{r}
+#| message: false
+library(tidyverse)
+library(primer.data)
+```
