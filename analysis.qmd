@@ -6,8 +6,6 @@ execute:
   echo: false
 ---
 
-Statisticians often try to find ways to project the election results of the US presidential elections. Using surveyed data about US citizens from American National Election Studies, we try to find how the sex of the voters is associated with their choices in the 1992 presidential election. A potential weakness in our model is that the respondents to the survey don't necessarily accurately represent the total voter population in the US. There is a certain demographic that are more likely to answer the survey, which could influence representativeness. We model voter choice in the 1992 election as a multinomial function of the sex of the voter. One quantity of interest was the candidate with the highest proportion of female voters, who turned out to be Clinton. The predicted proportion of female voters to vote for Clinton was 0.525 with a 95% confidence interval from 0.492 to 0.558. However, the estimates for the quantity of interest and its uncertainty could be wrong because the model takes data from across many elections, while the prediction is only for 1992. If political policies for different parties changed over the years, then the proportion of female support toward Clinton could be higher or lower than the estimated 0.525.
-
 $$P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \beta_{kn} X_n}}{\sum_{j=1}^{K} e^{\beta_{j0} + \beta_{j1} X_1 + \beta_{j2} X_2 + \cdots + \beta_{jn} X_n}}$$
 
 
@@ -89,3 +87,5 @@ ggplot(aes(x = sex, y = estimate, fill = sex)) +
     axis.text = element_text(color = "black")
   )
 ```
+
+Statisticians often try to find ways to project the election results of the US presidential elections. Using surveyed data about US citizens from American National Election Studies, we try to find how the sex of the voters is associated with their choices in the 1992 presidential election. A potential weakness in our model is that the respondents to the survey don't necessarily accurately represent the total voter population in the US. There is a certain demographic that are more likely to answer the survey, which could influence representativeness. We model voter choice in the 1992 election as a multinomial function of the sex of the voter. One quantity of interest was the candidate with the highest proportion of female voters, who turned out to be Clinton. The predicted proportion of female voters to vote for Clinton was 0.525 with a 95% confidence interval from 0.492 to 0.558. However, the estimates for the quantity of interest and its uncertainty could be wrong because the model takes data from across many elections, while the prediction is only for 1992. If political policies for different parties changed over the years, then the proportion of female support toward Clinton could be higher or lower than the estimated 0.525.
