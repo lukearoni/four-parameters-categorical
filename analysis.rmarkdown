@@ -58,3 +58,4 @@ tidy(fit_nes, conf.int = TRUE) %>%
     estimate = "Estimate"
   )
 ```
+
